@@ -21,6 +21,6 @@ LIB_JARS=`ls $LIB_DIR|grep .jar|awk '{print "'$LIB_DIR'/"$0}'|tr "\n" ":"`
 
 JAVA_OPTS="-server -Xmx2g -Xms2g -Xss256k -XX:PermSize=128m -XX:+UseConcMarkSweepGC -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70"
 
-nohup java $JAVA_OPTS -classpath $CONF_DIR:$LIB_JARS com.glsx.hbase.serviceice.HBaseDaoServer > $STDOUT_FILE 2>&1 &
+nohup java $JAVA_OPTS -classpath $CONF_DIR:$LIB_JARS com.glsx.performance.PerformanceEvaluation > $STDOUT_FILE 2>&1 &
 echo "OK!"
 
